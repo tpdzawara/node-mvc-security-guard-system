@@ -1,0 +1,101 @@
+.login {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.login-form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+}
+
+.banner-login {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-login img {
+    position: relative;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.login-form-wrapper button {
+    width: 30%;
+    background: blue;
+    color: white;
+    border: none;
+}
+
+
+.login-form-wrapper button:hover {
+    border: none;
+    color: white;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.login-title p {
+    font-size: 15px;
+    color: yellow;
+}
+.login-title h2 {
+    font-size: 28px;
+    color: yellow;
+}
+
+label {
+    color: blue;
+}
+
+.reseter {
+    color: yellow;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 70px;
+}
+.reseter:hover {
+    text-decoration: none;
+}
+
+.form-control {
+    border: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .banner-login {
+        width: 50%;
+       padding: 0 2%;
+    }
+
+    .banner-login img {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .banner-login img {
+       display: none;
+    }
+    .login-form {
+        width: 100%;
+    }
+}

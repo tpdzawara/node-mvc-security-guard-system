@@ -1,0 +1,18 @@
+.clie { 
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-btn {
+    color: white;
+    background: yellow;
+    font-size: 18px;
+}
+.save-btn:hover {
+    border: none;
+    color: white;
+    background: blue;
+}

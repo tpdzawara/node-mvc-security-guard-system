@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+.manager .mim {
+  background-color: blue;
+  border: none;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Muli", sans-serif;
+}
+
+.headers {
+  font-family: "Muli", sans-serif;
+  background-color: #ccc;
+  border: none;
+  padding: 12px 35px;
+  text-decoration: none;
+  color: blue;
+  font-size: 16px;
+}
+.status {
+    color: green;
+}
+
+.dropdown-menu {
+    border: none;
+    width: 10px;
+}
+.dropdown-item {
+    color: blue;
+    font-family: "Muli", sans-serif;
+    font-size: 13px;
+}
+
+.delete {
+    color: red;
+}
+
+.update {
+    color: darkgreen;
+}
+
+.info {
+    color: orange;
+}

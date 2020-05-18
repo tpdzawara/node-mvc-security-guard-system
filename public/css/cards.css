@@ -1,0 +1,27 @@
+.card-deck .card {
+    border: none;
+    height: 130px;
+    width: 210px;
+    align-items: center;
+    box-shadow: 4px;
+}
+
+.card-deck {
+    margin: 7px;
+}
+.card{
+    box-shadow: 0.1px  0.2px rgb(165, 163, 163);
+}
+
+.card-title {
+    color: blue;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.big-number {
+    font-size: 60px;
+    position: relative;
+    color: blue;
+    bottom: 15px;
+}

@@ -1,0 +1,40 @@
+main {
+    display: block;
+    height: 100%;
+    background-color: #fbfbf7;
+    width: calc(100% - 180px);
+}
+
+main .main-content {
+    padding: 30px;
+    width: 100%;
+    border: 1px solid #fbfbf7;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar-track
+{
+	border: 1px solid blue;
+	background-color: #F5F5F5;
+}
+
+.main-content::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.main-content::-webkit-scrollbar-thumb
+{
+	background-color: yellow;	
+}
+
+
+.main-content .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
