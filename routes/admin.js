@@ -1,15 +1,13 @@
-const { Router } = require('express');
-const router = Router();
+const router = require('express').Router();
 
-const AdminController = require('../controllers/admin');
+//Login
+router.get('/login', (req, res) => {
+    res.render('login');
+})
 
-//Get All registered adminstrators
-router.get('/', AdminController.getAllAdmin);
-
-//register admin
-router.post('/signup', AdminController.createNewAdmin);
- 
-//login admin
-router.post('/login', AdminController.loginAdmin)
+//Register
+router.get('/register', (req, res) => {
+    res.render('register');
+})
 
 module.exports = router;
