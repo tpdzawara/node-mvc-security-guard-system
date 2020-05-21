@@ -1,7 +1,7 @@
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 
-// Load User model
+// Load Admin model
 const Admin = require('../models/Admin');
 
 module.exports = function(passport) {
@@ -28,13 +28,13 @@ module.exports = function(passport) {
     })
   );
 
-  passport.serializeUser(function(user, done) {
-    done(null, user.id);
+  passport.serializeUser(function(admin, done) {
+    done(null, admin.id);
   });
 
   passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      done(err, user);
+    Admin.findById(id, function(err, admin) {
+      done(err, admin);
     });
   });
 };

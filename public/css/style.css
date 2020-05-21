@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 * {
     margin: 0;
     padding: 0;
@@ -111,7 +112,6 @@
     }
   }
   /***Register Form***/
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
   *:focus {
     outline: none;
   }
@@ -129,7 +129,7 @@
   #login-box {
     position: relative;
     margin: 5% auto;
-    width: 600px;
+    width: 800px;
     height: 400px;
     background: #FFF;
     border-radius: 2px;
@@ -162,8 +162,8 @@
     display: block;
     box-sizing: border-box;
     margin-bottom: 20px;
-    padding: 4px;
-    width: 220px;
+    padding: 2px;
+    width: 320px;
     height: 32px;
     border: none;
     border-bottom: 1px solid #AAA;
@@ -235,6 +235,7 @@
     position: relative;
     width: 230px;
     margin-top: 68px;
+    margin-right: 35px;
   }
   
   .right .loginwith {

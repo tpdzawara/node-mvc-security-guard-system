@@ -1,19 +1,16 @@
-const router = require("express").Router();
-
+const express = require('express');
+const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-
+// Load Admin model
 const Admin = require('../models/Admin');
 const { forwardAuthenticated } = require('../config/auth');
-//Login
-router.get("/login", forwardAuthenticated, (req, res) => {
-  res.render("login");
-});
 
-//Register
-router.get("/register", forwardAuthenticated, (req, res) => {
-  res.render("register");
-});
+// Login Page
+router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
+
+// Register Page
+router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
 // Register
 router.post('/register', (req, res) => {
@@ -29,7 +26,7 @@ router.post('/register', (req, res) => {
   }
 
   if (password.length < 6) {
-    errors.push({ msg: 'Password must be at least 6 characters' });
+    errors.push({ msg: 'Password Min is 6' });
   }
 
   if (errors.length > 0) {
@@ -64,7 +61,7 @@ router.post('/register', (req, res) => {
             newAdmin.password = hash;
             newAdmin
               .save()
-              .then(user => {
+              .then(admin => {
                 req.flash(
                   'success_msg',
                   'You are now registered and can log in'
