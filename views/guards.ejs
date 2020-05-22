@@ -1,0 +1,152 @@
+<div class="flex-dashboard">
+    <sidebar>
+        <div class="sidebar-title">
+            <img src="../img/Trust-me-logo.png" alt="Trust-me-logo">
+            <p><%= user.name %> </p>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="/client">
+                        Clients</a>
+                </li>
+                <li>
+                    <a href="#">
+                        Guards</a>
+                </li>
+                <li>
+                    <a href="/stuff">
+                        Staff</a>
+                </li>
+                <li>
+                    <a href="/tracker">
+                        Tracker</a>
+                </li>
+                <li>
+                    <a href="/reports">
+                        Reports</a>
+                </li>
+                <li>
+                    <a href="/site">
+                        Sites</a>
+                </li>
+                <li>
+                    <a href="">
+                        Inventory</a>
+                </li>
+                <li>
+                    <a href="">
+                        Scheduler</a>
+                </li>
+                <li>
+                    <a href="">
+                        Payroll</a>
+                </li>
+                <li>
+                    <a href="">
+                        Accounts</a>
+                </li>
+            </ul>
+        </div>
+    </sidebar>
+<main>
+    <header>
+        <a href="/">Dashboard</a>
+        <a href="/admin/logout">Logout</a>
+    </header>
+    <div class="main-content">
+        <a class="new-client" href="/guard">New Guard</a>
+        <hr>
+        <div class="search-bar">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search Client">
+                <button class="btn  my-2 my-sm-0" type="submit">Search</button>
+              </form>
+        </div>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              
+            </li>
+            <li class="nav-item" role="presentation">
+              
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table class="table table-borderless">
+                    <thead>
+                      <tr class="headers">
+                        <th scope="col">Guard ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Protection Type</th>
+                        <th scope="col">Guard Level</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Manage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>23 Edmark</td>
+                        <td>+263 456 6859</td>
+                        <td>Transit</td>
+                        <td>2</td>
+                        <td class="status">Active</td>
+                        <td class="manager">
+                            <div class="dropdown">
+                            <a href="" class=" mim dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false"">Manage</a>
+                             <div class="dropdown-menu">
+                                <a class="dropdown-item info" href="#">View Details</a>
+                                <a class="dropdown-item update" href="#">Update Info</a>
+                                <a class="dropdown-item delete" href="#">Delete</a>
+                              </div>
+                        </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>  
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table class="table table-borderless">
+                    <thead>
+                      <tr class="headers">
+                        <th scope="col">client id</th>
+                        <th scope="col">client address</th>
+                        <th scope="col">contact name</th>
+                        <th scope="col">contact No:</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Manage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>+263 456 6859</td>
+                        <td>mark@marques.com</td>
+                        <td class="status">Active</td>
+                        <td class="manager">
+                            <div class="dropdown">
+                            <a href="" class=" mim dropdown-toggle" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">Manage</a>
+                             <div class="dropdown-menu">
+                                <a class="dropdown-item info" href="#">View Details</a>
+                                <a class="dropdown-item update" href="#">Update Info</a>
+                                <a class="dropdown-item delete" href="#">Delete</a>
+                              </div>
+                        </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>  
+            </div>
+          </div>
+        </div>
+    </main>
+    </div>
