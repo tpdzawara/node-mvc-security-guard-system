@@ -159,3 +159,123 @@ main .main-content {
     padding: 20px;
 }
 /*****MAIN CONTENT ENDS**/
+
+/*======Welcomepage**-===*/
+.butans {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.butans .btn {
+    margin: 10px;
+    width: 260px;
+    margin-top: 12px;
+}
+
+.welcome {
+    font-size: 26px;
+    color: blue;
+}
+/*welcome finished */
+
+/*=========CLIENTS FROMS STYLES============*/
+.client-a {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 7px 85px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+  .client-a:hover {
+    text-decoration: none;
+    color: yellow;
+    font-family: "Muli", sans-serif;
+  }
+  .client-b {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 7px 85px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+  .client-b:hover {
+    text-decoration: none;
+    color: yellow;
+    font-family: "Muli", sans-serif;
+  }
+  
+  .nav {
+    margin-top: 15px;
+  }
+  .search-bar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search-bar .form-control:hover {
+    border: none;
+  }
+  .search-bar .btn {
+    color: blue;
+    border: 1px solid black;
+  }
+  .search-bar .btn:hover {
+    border: none;
+  }
+  
+  hr {
+    width: 100%;
+  }
+  
+  .new-client {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 7px 45px;
+    text-align: center;
+    text-decoration: none;
+    justify-content: flex-end;
+    font-size: 16px;
+  }
+  
+  .new-client:hover {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .headers th {
+      font-size: 15px;
+  }
+  .details th, td {
+      font-size: 12px;
+  }
+.dropdown-item {
+    font-size: 13px;
+  
+}
+.dropdown-toggle:hover {
+    text-decoration: none;
+}
+.dropdown-menu {
+    border: none;
+}
+.info {
+    color: darkgreen;
+}
+.update {
+    color: darkblue;
+}
+.delete {
+    color: darkred;
+}
+ 
+
+/*=========CLIENTS FROMS STYLES ENDS============*/
