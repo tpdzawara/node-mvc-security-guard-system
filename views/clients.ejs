@@ -55,11 +55,11 @@
                     <a href="/admin/logout"></i>Logout</a>
                 </header>
                 <div class="main-content">
-                    <a class="new-client" href="/add-client">New Client</a>
+                    <a class="new-client" href="/clients/add-client">New Client</a>
                     <hr>
                     <div class="search-bar">
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search Client">
+                        <form class="form-inline my-2 my-lg-0" action="/clients" method="GET">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search Client" value="<%= searchOptions.client %>">
                             <button class="btn  my-2 my-sm-0" type="submit">Search</button>
                           </form>
                     </div>
@@ -73,7 +73,8 @@
                       </ul>
                       <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <table class="table table-borderless">
+                          <% if (clients > 0 ) {%> 
+                          <table class="table table-borderless">
                                 <thead>
                                   <tr class="headers">
                                     <th scope="col">client id</th>
@@ -87,11 +88,13 @@
                                 </thead>
                                 <tbody>
                                   <tr class="details">
+                                   
+                                    <% for(let client of clients) { %> 
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>+263 456 6859</td>
-                                    <td>mark@marques.com</td>
+                                    <td><%= client.address %></td>
+                                    <td><%= client.contact %></td>
+                                    <td><%= client.phone %></td>
+                                    <td><%= client.email %></td>
                                     <td class="status">Active</td>
                                     <td class="manager">
                                         <div class="dropdown">
@@ -104,9 +107,13 @@
                                           </div>
                                     </div>
                                     </td>
-                                  </tr>
+                                    <% } %> 
+                                  </tr> 
                                 </tbody>
-                              </table>  
+                              </table>
+                              <% } else { %>
+                                <h1>No Clients Added</h1>
+                                <% } %>
                         </div>
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <table class="table table-borderless">

@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const expressLayouts = require('express-ejs-layouts');
-const ejs = require('ejs');
 const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const exphbs = require('express')
 const flash = require('connect-flash');
+const path = require('path');
 
 const bodyParser = require('body-parser');
 const app = express();
@@ -16,15 +16,14 @@ require('./config/passport')(passport);
 app.use(morgan('dev'))
 
 //Set views
-app.set('view engine', 'ejs');
+
 app.set('views', __dirname + '/views');
-app.set('layout', 'layouts/layout');
-app.use(expressLayouts);
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //import routes;
 const DashboardRoute = require('./routes/index');
 const AdminRoute = require('./routes/admin');
+const ClientRoute = require('./routes/client');
 //Database config
 const { mongoURI } = require('./utils/database');
 //Connecting to mongoose
@@ -70,6 +69,7 @@ app.use(
 //EndPoints
 app.use('/', DashboardRoute);
 app.use('/admin', AdminRoute);
+app.use('/clients', ClientRoute);
 
 const port = process.env.PORT || 5500;
 app.listen(port, () => console.log(`http://localhost:${port}`))

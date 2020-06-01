@@ -3,6 +3,13 @@ const router = Router();
 
 const secured = require('../middleware/authenticate');
 
-const { newClient, allClients, singleClient, updateClient, deleteClient } = require('../controllers/client');
-//get client page render all clients
+const { getClients, addClients, addClient } = require('../controllers/client');
+
+router.route('/clients')
+.get(getClients)
+.post(addClient)
+
+router.route('/add-client')
+.get(addClients)
+
 module.exports = router;
